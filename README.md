@@ -30,3 +30,5 @@ cleaned up.
 3) Joomla! code compliance is not 100%. Blame my editor.
 
 4) Articles with state 3 (pending) do not show up in default backend overview, unless State = All is selected.
+
+5) Other content types (modules, banners, ect) will still need to be added. It requires a single line of code, but lots of testing.
