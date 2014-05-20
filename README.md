@@ -1,12 +1,13 @@
 plg_system_pendingstate
 =======================
 This Joomla! plugin allows for published articles with the field "publish_up" set in the future to have a pending state.
-The plugin is triggered when an article is saved. When the published up date is in the future, the state is changed into -1.
+The plugin is triggered when an article is saved. When the published up date is in the future, the state is changed into 3.
 Additionally, the plugin is run every request to make sure pending articles are published again once the right date is reached.
 
 Backgrounds
 ===========
 Joomla! normally uses one of 2 states to determine whether an article should show or not: 0 (unpublished) or 1 (published).
+Additionally there is a state archived (2).
 While this works in most cases, there are a couple of issues here:
 
 1) Once the article is published while still having a publish_up in the future, the article is hidden for normal users. It is displayed
@@ -25,3 +26,7 @@ for this, but this would mean a cronjob takes over here. This cronjob is still m
 
 2) The $context argument of onContentBeforeSave() is currently not checked. This should be in sync with the tables that can be auto
 cleaned up.
+
+3) Joomla! code compliance is not 100%. Blame my editor.
+
+4) Articles with state 3 (pending) do not show up in default backend overview, unless State = All is selected.
