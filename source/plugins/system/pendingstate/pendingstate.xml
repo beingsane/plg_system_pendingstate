@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_PENDINGSTATE</name>
+    <author>Yireo</author>
+    <creationDate>May 2014</creationDate>
+    <copyright>Copyright (C) 2014 Yireo.com. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <authorEmail>info@yireo.com</authorEmail>
+    <authorUrl>www.yireo.com</authorUrl>
+    <version>0.0.1</version>
+    <description>PLG_SYSTEM_PENDINGSTATE_DESC</description>
+
+    <files>
+        <filename plugin="pendingstate">pendingstate.php</filename>
+        <filename>index.html</filename>
+    </files>
+
+    <languages>
+        <language tag="en-GB">en-GB.plg_system_pendingstate.ini</language>
+        <language tag="en-GB">en-GB.plg_system_pendingstate.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="auto_cleanup" type="list" default="1" label="PLG_SYSTEM_PENDINGSTATE_FIELD_AUTO_CLEANUP" 
+                    description="PLG_SYSTEM_PENDINGSTATE_FIELD_AUTO_CLEANUP_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+
+    <updateservers>
+        <server type="extension" priority="1" name="plg_system_pendingstate">http://www.yireo.com/updates/plg_system_pendingstate.xml</server>
+    </updateservers>
+
+</extension>
